@@ -1,0 +1,31 @@
+table {
+	width:100%;
+	border:$border;
+	margin-bottom: $spacing;
+	td, th {
+		padding:$padding;
+		border-bottom:$border;
+		border-left:$border;
+
+	}
+	th {
+		color:$color-1;
+		@extend .text-left;
+	}
+	&.clean, .clean table, &.clean td, &.clean th, .clean td, .clean th {border:none;}
+	&.clean tr, &.clean tr, .clean tr, .clean tr {background: none;}
+}
+.table-stripped {
+	tr:nth-child(even) {
+		background:$color-bg;
+	}
+}
+/* Tables Colours */
+@each $type, $color in $colors {
+	.table-#{$type}, .table-#{$type} table {
+		border-color:$color;
+		td {border-bottom-color:$color}
+		tr:nth-child(even) {background:rgba($color,0.1);}
+	}
+
+}

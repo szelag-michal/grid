@@ -1,0 +1,68 @@
+.btn {
+	display: inline-block;
+	font-family:$font-family-title;
+	@include font-size(15px);
+	font-weight:900;
+	text-align:center;
+	cursor: pointer;
+	vertical-align: top;
+	padding:10px 24px;
+	border:$border;
+	border-radius:$radius;
+
+	&.btn-sm {padding:2px 6px;}
+	&.btn-md {padding:10px 15px;}
+	&.btn-lg {padding:15px 25px;}
+
+	&.btn-disabled {cursor: not-allowed;}
+
+	&.btn-icon {
+		.icon {display:block;font-size:2em;}
+		.text {display: block;font-size:0.8em;padding: 5px;text-transform: uppercase;font-weight: bold;}
+	}
+	&.btn-drag {cursor:move;}
+}
+/* Buttons Colours */
+@mixin btn($color) {
+	color:$color-1;
+	border-color: darken($color-1,5);
+	background:#fff;
+
+	&:hover {
+		background:darken($color-1,10);
+		border-color:darken($color-1,10);
+		color:#fff;
+	}
+
+	@if (lightness($color) >= lightness(#aaa)) {
+		color:darken($color,40);
+	}
+	@else {
+		color:rgba($color-1,0.85);
+	}
+
+
+	&.btn-outline {
+		background:none;
+		border-color:$color;
+		color:$color;
+	}
+
+	&.btn-disabled {
+		background:rgba($color,0.1);
+		border-color:rgba($color,0.1);
+		color:rgba($color,0.4);
+		&:hover{
+			background:rgba($color,0.1);
+			color:rgba($color,0.4);
+			border-color:rgba($color,0.1);
+		}
+	}
+} //Mixin End
+.btn {@include btn($color-1);}
+.btn-primary {@include btn($color-1);}
+.btn-secondary {@include btn($color-2);}
+.btn-error {@include btn($color-error);}
+.btn-success {@include btn($color-success);}
+.btn-warning {@include btn($color-warning);}
+.btn-info {@include btn($color-info);}
