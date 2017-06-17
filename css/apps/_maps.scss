@@ -17,7 +17,6 @@
 			}
 		}
 		.direction_search_button {
-			@extend .btn;
 			@include btn($color-1);
 		}
 	}

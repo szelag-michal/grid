@@ -1,67 +1,71 @@
 .btn {
+	-webkit-box-sizing: content-box;
+	        box-sizing: content-box;
 	display: inline-block;
-	font-family:$font-family-title;
+	font-family: $font-family-title;
 	@include font-size(15px);
-	font-weight:900;
-	text-align:center;
+	font-weight: 900;
+	text-align: center;
 	cursor: pointer;
-	vertical-align: top;
-	padding:10px 24px;
-	border:$border;
-	border-radius:$radius;
+	border: none;
+	padding: 6px 10px;
+	border-radius: $radius;
+	color: $color-default;
+	background: $color-bg;
+	vertical-align: middle;
+	max-width: 100%;
 
-	&.btn-sm {padding:2px 6px;}
-	&.btn-md {padding:10px 15px;}
-	&.btn-lg {padding:15px 25px;}
+	&-sm {padding: 2px 6px;}
+	&-md {padding: 12px 20px;}
+	&-lg {padding: 20px 35px;}
 
-	&.btn-disabled {cursor: not-allowed;}
 
-	&.btn-icon {
-		.icon {display:block;font-size:2em;}
-		.text {display: block;font-size:0.8em;padding: 5px;text-transform: uppercase;font-weight: bold;}
-	}
-	&.btn-drag {cursor:move;}
+	&:hover {background: darken($color-bg,10);}
+	&.btn-disabled {cursor: not-allowed;color: rgba($color-default,0.3);background: $color-bg;}
 }
+a.btn {margin-bottom: -2px}
 /* Buttons Colours */
 @mixin btn($color) {
-	color:$color-1;
-	border-color: darken($color-1,5);
-	background:#fff;
+	color: $color-3;
+	border-color: darken($color,5);
+	background: $color;
 
 	&:hover {
-		background:darken($color-1,10);
-		border-color:darken($color-1,10);
-		color:#fff;
+		background: darken($color,10);
+		border-color: darken($color,10);
+		color: $color-3;
 	}
 
 	@if (lightness($color) >= lightness(#aaa)) {
-		color:darken($color,40);
+		color: darken($color,40);
 	}
 	@else {
-		color:rgba($color-1,0.85);
+		color: $color-3;
 	}
 
 
 	&.btn-outline {
-		background:none;
-		border-color:$color;
-		color:$color;
+		background: none;
+		border: solid 1px $color;
+		color: $color;
+		&:hover {background: $color;color: $color-3;}
 	}
 
 	&.btn-disabled {
-		background:rgba($color,0.1);
-		border-color:rgba($color,0.1);
-		color:rgba($color,0.4);
+		background: rgba($color,0.1);
+		border-color: rgba($color,0.1);
+		color: rgba($color,0.4);
+		&.btn-outline {background: none; &:hover {background: none;}}
 		&:hover{
-			background:rgba($color,0.1);
-			color:rgba($color,0.4);
-			border-color:rgba($color,0.1);
+			background: rgba($color,0.1);
+			border-color: rgba($color,0.1);
+			color: rgba($color,0.4);
+
 		}
 	}
-} //Mixin End
-.btn {@include btn($color-1);}
-.btn-primary {@include btn($color-1);}
-.btn-secondary {@include btn($color-2);}
+} /*Mixin End*/
+.btn-1 {@include btn($color-1);}
+.btn-2 {@include btn($color-2);}
 .btn-error {@include btn($color-error);}
 .btn-success {@include btn($color-success);}
 .btn-warning {@include btn($color-warning);}
