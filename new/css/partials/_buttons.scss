@@ -1,4 +1,4 @@
-.btn {
+.btn, button {
 	-webkit-box-sizing: content-box;
 	        box-sizing: content-box;
 	display: inline-block;
@@ -7,7 +7,8 @@
 	font-weight: 900;
 	text-align: center;
 	cursor: pointer;
-	border: none;
+	border: solid 0px $color-bg;
+	line-height: $line-height;
 	padding: 6px 10px;
 	border-radius: $radius;
 	color: $color-default;
@@ -23,7 +24,7 @@
 	&:hover {background: darken($color-bg,10);}
 	&.btn-disabled {cursor: not-allowed;color: rgba($color-default,0.3);background: $color-bg;}
 }
-a.btn {margin-bottom: -2px}
+
 /* Buttons Colours */
 @mixin btn($color) {
 	color: $color-3;
