@@ -1,0 +1,102 @@
+@mixin font-size($size) {
+  @if unitless($size) {
+    $size: $size * 1px;
+  }
+
+  font-size: $size;
+  font-size: ($size / $font-size) * 1rem;
+}
+
+@mixin column-count($columns: 2) {
+	-webkit-column-count: $columns;
+	-moz-column-count: $columns;
+	column-count: $columns;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+	-webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin radius($val:$radius) {
+-webkit-border-radius:  $val;
+-moz-border-radius:  $val;
+-ms-border-radius:  $val;
+	border-radius:  $val;
+}
+$prefixes: webkit, moz, o;
+@mixin cb($name, $args) {
+	@if $name == 'transform' {
+		$prefixes: webkit, moz, ms, o;
+		@each $prefix in $prefixes {
+			-#{$prefix}-#{$name}: $args;
+		}
+		#{$name}: $args;
+	} @else if $name == 'transition' {
+		@each $prefix in $prefixes {
+			-#{$prefix}-#{$name}: -#{$prefix}-$args;
+		}
+		#{$name}: #{-webkit}-$args;
+		#{$name}: $args;
+
+	}
+	@else {
+		@each $prefix in $prefixes {
+			-#{$prefix}-#{$name}: $args;
+		}
+		#{$name}: $args;
+	}
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin fade($time: 200ms, $timing-function: ease-in-out) {
+	-webkit-transition: all $time $timing-function;
+	-moz-transition:  all $time $timing-function;
+	transition:  all $time $timing-function;
+}
+
+@mixin placeholder ($val:$color-primary) {
+	.form-element::-webkit-input-placeholder {color: $val;}
+	.form-element:-moz-placeholder {color: $val;opacity:  1;}
+	.form-element::-moz-placeholder {color: $val;opacity: 1;}
+	.form-element:-ms-input-placeholder {color: $val;}
+}
+
+@mixin gradient($angle,$gradient1, $gradient2) {
+  background-color: $gradient2;
+  background-image: -webkit-gradient(linear, $angle, from($gradient1), to($gradient2));
+  background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2);
+  background-image:    -moz-linear-gradient($angle, $gradient1, $gradient2);
+  background-image:     -ms-linear-gradient($angle, $gradient1, $gradient2);
+  background-image:      -o-linear-gradient($angle, $gradient1, $gradient2);
+  background-image:         linear-gradient($angle, $gradient1, $gradient2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient1}', EndColorStr='#{$gradient2}');
+}
+@mixin column-count($val) {
+-webkit-column-count: $val;
+   -moz-column-count: $val;
+		column-count: $val;
+}
+@mixin column-gap($val) {
+-webkit-column-gap: $val;
+   -moz-column-gap: $val;
+        column-gap: $val;
+}

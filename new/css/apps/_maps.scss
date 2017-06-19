@@ -1,0 +1,23 @@
+.app_Google_map, .map, .google_map {
+	position: relative;
+	padding:0  0 40px;
+	.directions {
+
+		width: 100%;
+		background: $color-bg;color: $color-1;
+		.direction_search_panel {
+			@extend .form-group;
+			@include flexbox;
+			@include align-items(center);
+			@include justify-content(center);
+			padding: 10px;
+			span {padding: 0 10px;}
+			input, select {
+				@extend .form-element;
+			}
+		}
+		.direction_search_button {
+			@include btn($color-1);
+		}
+	}
+}

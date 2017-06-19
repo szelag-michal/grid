@@ -1,0 +1,33 @@
+.tags {
+	li {display: inline-block;}
+	a {
+		position: relative;
+		display: block;
+		padding: 5px;
+		background: $color-default;
+		color: $color-text;
+		margin-right: 20px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -10px;
+			border-bottom: 13px transparent solid;
+			border-left: 10px $color-default solid;
+			border-top: 14px transparent solid;
+			border-left: 10px $color-default solid;
+			width: 0;
+			height: 0;
+		}
+		&:hover {
+			background:darken($color-default,10);
+			&:before {
+			content: '';
+			border-bottom: 13px transparent solid;
+			border-left: 10px darken($color-default,10) solid;
+			border-top: 14px transparent solid;
+			border-left: 10px darken($color-default,10) solid;
+		}
+		}
+	}
+}
