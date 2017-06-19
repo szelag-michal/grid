@@ -29,22 +29,29 @@
 /* FORMS */
 	@import 'forms';
 
-/* APPS */
+/* APPS - TABS */
 	@import '../apps/tabs';
-	//@import '../apps//tags';
+/* APPS - MAPS */
 	@import '../apps/maps';
+/* APPS - FAQ */
 	@import '../apps/faq';
+/* APPS - NAVIGATION */
 	@import '../apps/navigation';
+/* APPS - TESTIMONIALS */
 	@import '../apps/testimonials';
+/* APPS - BLOG */
 	@import '../apps/blog';
+/* APPS - GALLERIES */
 	@import '../apps/galleries';
+/* APPS - ECOMMERCE */
     //@import '../apps/ecommerce';
 
 /* Vendors */
-
-	//@import '../vendors/cropper';
+/* VENDORS - JQUERYUI */
 	//@import '../vendors/jqueryui';
+/* VENDORS - JQUERYUI THEME */
 	@import '../vendors/jqueryui.theme';
-	//@import '../vendors/mce';
+/* VENDORS - PRISM */
 	//@import '../vendors/prism';
+/* VENDORS - FONT AWESOME */	
 	@import '../vendors/font-awesome.min';

@@ -1,3 +1,10 @@
+@include breakpoint(md-ls) {
+	.test {color: red;}
+}
+@include breakpoint(120px) {
+	.test {color: blue;}
+}
+
 @media only screen and (min-width: $lg) {}
 @media only screen and (max-width: $md) {}
 

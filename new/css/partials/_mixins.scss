@@ -1,23 +1,22 @@
 @mixin breakpoint($class) {
- @if $class == lg {
+ @if $class == "lg" {
 	@media (min-width: $lg) { @content; }
   }
 
-  @else if $class == md-ls {
+  @else if $class == "md-ls" {
     @media (max-width: $md) and (orientation: landscape) { @content; }
   }
-  @else if $class == md {
+  @else if $class == "md" {
     @media (max-width: $md) and (orientation: portrait) { @content; }
   }
- @else if $class == sm-ls {
+ @else if $class == "sm-ls" {
     @media (max-width: $sm) and (orientation: landscape) { @content; }
   }
-  @else if $class == sm {
+  @else if $class == "sm" {
     @media (max-width: $sm) and (orientation: portrait) { @content; }
   }
 
   @else {
-
     @media (max-width: $class) { @content; }
   }
 }
