@@ -14,6 +14,7 @@ body {
 		margin-bottom: 10px;
 		color: $color-title;
 		font-family:$font-family-title;font-size: $font-size-title ;
+		display: block;
 	}
 	$font-size-title: $font-size-title - 0.4;
 }
@@ -60,15 +61,7 @@ blockquote {
 	&-warning {color: $color-warning;}
 
 }
-
-.hero {
-	background: $color-default;padding:10px;border-radius:$radius;
-	&-sm {font-size:0.8em;padding:5px;}
-	&-md {font-size:1.2em;padding:15px;}
-	&-lg {font-size:1.6em;padding:20px;}
-}
 /* Main Colours */
-
 	@each $name, $color, $icon in $colors {
 		.#{$name} {color:$color;}
 	} //end each

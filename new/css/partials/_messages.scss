@@ -1,16 +1,24 @@
-.message {
-	padding:5px 10px;margin:10px 0;
-	p:last-of-type {margin-bottom: 0;}
-	&.icon {
-		@include flexbox;
-		@include align-items(center);
+.icon {
+	@include flexbox;
+	@include align-items(center);
 
-		padding:5px 10px;
-		&:before {font-family: $font-icons;display:block;padding:20px;text-align: center;font-size: 1.4em;}
+	padding:.325em .625em;
+	&:before {
+		font-family: $font-icons;
+		display:block;
+		padding: .325em 0;
+		text-align: center;
+		font-size: 1em;
+		width: 1.4em;
 	}
-	&.form-group {border-color: transparent !important;}
 }
 
+.message {
+	padding:.325em .625em;margin:.625em 0;
+	p:last-of-type {margin-bottom: 0;}
+
+	&.form-group {border-color: transparent !important;}
+}
 /* Messages Colours */
 @mixin message($color) {
 
@@ -26,11 +34,12 @@
 }//end mixin
 
 	@each $name, $color, $icon in $colors {
-
+		&.#{$name} {
+			&.icon:before {content:$icon}
+		}
 		.message {
 			&.#{$name} {
 				@include message($color);
-				&.icon:before {content:$icon}
 			}
 
 			a {

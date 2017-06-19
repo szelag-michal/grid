@@ -12,54 +12,188 @@
 </head>
 <body>
 
-	<header class="main_header"></header>
+	<header class="main_header"><h1>Grid</h1></header>
+
 	<section class="content">
-		<p>
-			<button class="btn btn-1">button</button>
-			<a href="#" class="btn btn-1">anchor</a>
-			<input type="submit" class="btn btn-1" value="input submit">
-			<input type="button" class="btn btn-1" value="input button">
-		</p>
-		<p>
-			<a href="#" class="btn">btn</a>
-			<a href="#" class="btn btn-1">btn-1</a>
-			<a href="#" class="btn btn-2">btn-2</a>
-			<a href="#" class="btn btn-info">btn-info</a>
-			<a href="#" class="btn btn-success">btn-success</a>
-			<a href="#" class="btn btn-error">btn-error</a>
-			<a href="#" class="btn btn-warning">btn-warning</a>
-		</p>
-		<p>some text before button
-			<a href="#" class="btn btn-sm">small</a>
-			<a href="#" class="btn btn-md">medium</a>
-			<a href="#" class="btn btn-lg">large</a>
-		</p>
-		<p>
-			<a href="#" class="btn btn-1 btn-outline">btn outline</a>
-			<a href="#" class="btn btn-2 btn-outline">btn outline</a>
-			<a href="#" class="btn btn-info btn-outline">btn outline</a>
-			<a href="#" class="btn btn-success btn-outline">btn outline</a>
-			<a href="#" class="btn btn-error btn-outline">btn outline</a>
-			<a href="#" class="btn btn-warning btn-outline">btn outline</a>
-		</p>
-		<p>
-			<a href="#" class="btn btn-disabled">btn disabled</a>
-			<a href="#" class="btn btn-1 btn-disabled">btn disabled</a>
-			<a href="#" class="btn btn-1 btn-disabled">btn disabled</a>
-			<a href="#" class="btn btn-info btn-disabled">btn disabled</a>
-			<a href="#" class="btn btn-success btn-disabled">btn disabled</a>
-			<a href="#" class="btn btn-error btn-disabled">btn disabled</a>
-			<a href="#" class="btn btn-warning btn-disabled">btn disabled</a>
-		</p>
-		<p>
-			<a href="#" class="btn btn-outline btn-disabled">btn btn-outline disabled</a>
-			<a href="#" class="btn btn-outline btn-1 btn-disabled">btn btn-outline disabled</a>
-			<a href="#" class="btn btn-outline btn-1 btn-disabled">btn btn-outline disabled</a>
-			<a href="#" class="btn btn-outline btn-info btn-disabled">btn btn-outline disabled</a>
-			<a href="#" class="btn btn-outline btn-success btn-disabled">btn btn-outline disabled</a>
-			<a href="#" class="btn btn-outline btn-error btn-disabled">btn btn-outline disabled</a>
-			<a href="#" class="btn btn-outline btn-warning btn-disabled">btn btn-outline 	disabled</a>
-		</p>
+		<div class="container">
+			<div class="row">
+				<div class="col lg-4">
+
+				</div>
+				<div class="col lg-8">
+					<h2>Messages</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="success">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="error">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+
+					<p class="icon info">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="icon success">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="icon error">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="icon warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+
+					<p class="message info">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="message success">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="message error">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="message warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+
+					<p class="message icon info">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="message icon success">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="message icon error">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+					<p class="message icon warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+
+					<div class="message error">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</p>
+						<ul>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</li>
+						</ul>
+					</div>
+
+					<h2>Forms</h2>
+					<form>
+						<div class="form-group">
+							<label for="">Label</label>
+							<input type="text" class="form-element" placeholder="input .form-element">
+						</div>
+						<div class="form-group">
+							<label for="">Select</label>
+							<select name="" id="" class="form-element">
+								<option value="">Option 1</option>
+								<option value="">Option 2</option>
+								<option value="">Option 3</option>
+								<option value="">Option 4</option>
+								<option value="">Option 5</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Checkbox</label>
+							<div class="checkbox">
+								<input type="checkbox" class="form-element" id="checkbox1">
+								<label for="checkbox1">Checkbox</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" class="form-element" id="checkbox2">
+								<label for="checkbox2">Checkbox</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Radio</label>
+							<div class="radio">
+								<input type="radio" class="form-element" id="radio1" name="radio">
+								<label for="radio1">radio</label>
+							</div>
+							<div class="radio">
+								<input type="radio"  class="form-element"id="radio2" name="radio">
+								<label for="radio2">radio</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Color</label>
+							<input type="color" class="form-element" placeholder="color">
+						</div>
+						<div class="form-group">
+							<label>Date</label>
+							<input type="date" class="form-element" placeholder="date" value="color">
+						</div>
+						<div class="form-group">
+							<label>Datetime Local</label>
+							<input type="datetime-local" class="form-element" placeholder="datetime-local">
+						</div>
+						<div class="form-group">
+							<label>E-Mail</label>
+							<input type="email" class="form-element" placeholder="email">
+						</div>
+						<div class="form-group">
+							<label>Month</label>
+							<input type="month" class="form-element" placeholder="month">
+						</div>
+						<div class="form-group">
+							<label>Number</label>
+							<input type="number" class="form-element" placeholder="number" min="0" max="5">
+						</div>
+						<div class="form-group">
+							<label>Range</label>
+							<input type="range" class="form-element" placeholder="range"  min="0" max="10">
+						</div>
+						<div class="form-group">
+							<label>Tel</label>
+							<input type="tel" class="form-element" placeholder="tel">
+						</div>
+						<div class="form-group">
+							<label>Time</label>
+							<input type="time" class="form-element" placeholder="time">
+						</div>
+						<div class="form-group">
+							<label>Url</label>
+							<input type="url" class="form-element" placeholder="url">
+						</div>
+						<div class="form-group">
+							<label>Week</label>
+							<input type="week" class="form-element" placeholder="week">
+						</div>
+						<div class="form-group">
+							<label>File</label>
+							<div class="file">
+								<input type="file" class="form-element" id="file1" name="file1">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Textarea</label>
+							<textarea name="textarea" id="textarea" cols="30" rows="10" class="form-element"></textarea>
+						</div>
+					</form>
+					<h2>Buttons</h2>
+					<h3 class="title_3">Types</h3>
+					<p>button .btn .btn-1</p>
+					<p>
+						<button class="btn btn-1">button .btn .btn-1</button>
+						<a href="#" class="btn btn-1">a .btn .btn-1</a>
+						<input type="submit" class="btn btn-1" value="input .btn .btn-1">
+					</p>
+					<p>
+						<h3>Colors</h3>
+						<p>.btn .btn-1 .btn-2</p>
+						<p>.btn-info .btn-success .btn-error .btn-warning</p>
+						<a href="#" class="btn">.btn</a>
+						<a href="#" class="btn btn-1">.btn .btn-1</a>
+						<a href="#" class="btn btn-2">.btn .btn-2</a>
+						<a href="#" class="btn btn-info">.btn .btn-info</a>
+						<a href="#" class="btn btn-success">.btn .btn-success</a>
+						<a href="#" class="btn btn-error">.btn .btn-error</a>
+						<a href="#" class="btn btn-warning">.btn .btn-warning</a>
+					</p>
+					<h3>Sizes</h3>
+					<p>.btn-sm .btn-md .btn-lg</p>
+					<p>
+						<a href="#" class="btn btn-sm">.btn-sm</a>
+						<a href="#" class="btn btn-md">.btn-md</a>
+						<a href="#" class="btn btn-lg">.btn-lg</a>
+					</p>
+					<h3>Styles</h3>
+					<p>.btn-outline .btn-disabled</p>
+					<p>
+						<a href="#" class="btn btn-1 btn-outline">.btn .btn-1 .btn-outline</a>
+						<a href="#" class="btn btn-2 btn-outline">.btn .btn-2 .btn-outline</a>
+						<a href="#" class="btn btn-info btn-outline">.btn .btn-info .btn-outline</a>
+						<a href="#" class="btn btn-success btn-outline">.btn .btn-success .btn-outline</a>
+						<a href="#" class="btn btn-error btn-outline">.btn .btn-error .btn-outline</a>
+						<a href="#" class="btn btn-warning btn-outline">.btn .btn-warning .btn-outline</a>
+					</p>
+					<p>
+						<a href="#" class="btn btn-disabled">.btn .btn-disabled</a>
+						<a href="#" class="btn btn-1 btn-disabled">.btn .btn-1 .btn-disabled</a>
+						<a href="#" class="btn btn-2 btn-disabled">.btn .btn-2 .btn-disabled</a>
+						<a href="#" class="btn btn-info btn-disabled">.btn .btn-info .btn-disabled</a>
+						<a href="#" class="btn btn-success btn-disabled">.btn .btn-success .btn-disabled</a>
+						<a href="#" class="btn btn-error btn-disabled">.btn .btn-error .btn-disabled</a>
+						<a href="#" class="btn btn-warning btn-disabled">.btn .btn-warning .btn-disabled</a>
+					</p>
+				</div>
+			</div>
+		</div>
 	</section>
 	<footer class="main_footer"></footer>
 

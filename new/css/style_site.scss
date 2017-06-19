@@ -1,46 +1,6 @@
-/* Fonts */
-	@import 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css';
-	@import url(https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400i|Roboto:400,700);
-
-	@import 'partials/variables';
-	@import 'partials/mixins';
-	@import 'partials/flexbox';
-	@import 'partials/breakpoints';
-	@import 'partials/reset';
-	@import 'partials/grid';
-	@import 'partials/global';
-	//@import 'partials/messages';
-	@import 'partials/buttons';
-	@import 'partials/tables';
-	@import 'partials/forms';
-
-/* APPS */
-	@import 'apps/tabs';
-	//@import 'apps//tags';
-	@import 'apps/maps';
-	@import 'apps/faq';
-	@import 'apps/navigation';
-	@import 'apps/testimonials';
-	@import 'apps/blog';
-	@import 'apps/galleries';
-    //@import 'apps/ecommerce';
-
-/* Vendors */
-
-	//@import 'vendors/cropper';
-	//@import 'vendors/jqueryui';
-	@import 'vendors/jqueryui.theme';
-	//@import 'vendors/mce';
-	//@import 'vendors/prism';
-	@import 'vendors/font-awesome.min';
+//Main File
+@import "partials/import";
 
 
 
-@media only screen and (min-width: $lg) {}
-@media only screen and (max-width: $md) {}
-
-@media only screen and (max-width: $md) and (orientation: landscape) {}
-@media only screen and (max-width: $md) and (orientation: portrait) {}
-
-@media only screen and (max-width: $sm) and (orientation: landscape) {}
-@media only screen and (max-width: $sm) and (orientation: portrait) {}
+@import "partials/breakpoints";

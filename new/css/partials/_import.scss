@@ -1,0 +1,50 @@
+
+	@import 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css';
+	@import url(https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400i|Roboto:400,700);
+
+/* PARTIALS */
+	@import 'variables';
+	@import 'mixins';
+	@import 'flexbox';
+	@import 'breakpoints';
+
+/* RESET */
+	@import 'reset';
+
+/* GRID */
+	@import 'grid';
+
+/* GLOBAL */
+	@import 'global';
+
+/* MESSAGES */
+	@import 'messages';
+
+/* BUTTONS */
+	@import 'buttons';
+
+/* TABLES */
+	@import 'tables';
+
+/* FORMS */
+	@import 'forms';
+
+/* APPS */
+	@import '../apps/tabs';
+	//@import '../apps//tags';
+	@import '../apps/maps';
+	@import '../apps/faq';
+	@import '../apps/navigation';
+	@import '../apps/testimonials';
+	@import '../apps/blog';
+	@import '../apps/galleries';
+    //@import '../apps/ecommerce';
+
+/* Vendors */
+
+	//@import '../vendors/cropper';
+	//@import '../vendors/jqueryui';
+	@import '../vendors/jqueryui.theme';
+	//@import '../vendors/mce';
+	//@import '../vendors/prism';
+	@import '../vendors/font-awesome.min';
