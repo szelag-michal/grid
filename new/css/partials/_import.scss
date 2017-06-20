@@ -1,6 +1,6 @@
 
-	@import 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css';
-	@import url(https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400i|Roboto:400,700);
+	@import '//cdn.linearicons.com/free/1.0.0/icon-font.min.css';
+	@import url('//fonts.googleapis.com/css?family=Lato|Playfair+Display:400i|Roboto:400,700');
 
 /* PARTIALS */
 	@import 'variables';
@@ -53,5 +53,5 @@
 	@import '../vendors/jqueryui.theme';
 /* VENDORS - PRISM */
 	//@import '../vendors/prism';
-/* VENDORS - FONT AWESOME */	
+/* VENDORS - FONT AWESOME */
 	@import '../vendors/font-awesome.min';
