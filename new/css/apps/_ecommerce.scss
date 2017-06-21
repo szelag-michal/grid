@@ -290,6 +290,7 @@ $color-discount: $color-error;
 	}
 }
 .full_cart_wrapper {
+	overflow-x: scroll;
 	table {
 		th {color: $color-2;}
 		td {vertical-align: middle;}
